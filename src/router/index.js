@@ -8,6 +8,7 @@ import ForgotPassword from '../views/ForgotPassword'
 import UvjetiKoristenja from '../views/UvjetiKoristenja'
 import PravilaPrivatnosti from '../views/PravilaPrivatnosti'
 import Dashboard from '../views/Dashboard'
+import UnosiView from '../views/UnosiView' 
 
 Vue.use(VueRouter)
 const routes = [
@@ -17,11 +18,11 @@ const routes = [
   { path: '/forgotpassword', name: 'ForgotPassword', component: ForgotPassword },
   { path: '/uvjetikoristenja', name: 'UvjetiKoristenja', component: UvjetiKoristenja },
   { path: '/pravilaprivatnosti', name: 'PravilaPrivatnosti', component: PravilaPrivatnosti },
-  // 2. Registracija Dashboard rute
-  { 
-    path: '/dashboard', 
-    name: 'Dashboard', 
-    component: Dashboard 
+
+   {
+    path: '/unosi',
+    name: 'UnosiView',
+    component: UnosiView
   }
 ]
 

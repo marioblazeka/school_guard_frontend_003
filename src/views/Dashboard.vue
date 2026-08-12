@@ -84,14 +84,18 @@ export default {
     this.checkUserRole();
   },
   methods: {
-    checkUserRole() {
-      const user = auth.currentUser;
-      if (user) {
-        // Primjer struke: Provjera je li ulogiran admin (na temelju klupske domene ili specifičnog emaila)
-        // Kasnije se ovo može zamijeniti s Firebase Custom Claims ili Firestore ulogama
-        if (user.email.endsWith('@admin.com') || user.email === 'mario@admin.hr') {
-          this.isAdmin = true;
-        }
+  checkUserRole() {
+    const user = auth.currentUser;
+    if (user) {
+      // Sustav će sada prepoznati vaš studentski email kao Admin pristup
+      if (
+        user.email === 'mblazeka@student.unipu.hr' || 
+        user.email.endsWith('@admin.com')
+      ) {
+        this.isAdmin = true;
+      }
+    }
+  },
       }
     },
     navigateTo(section) {
