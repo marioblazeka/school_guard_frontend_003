@@ -2,21 +2,23 @@
   <div class="container d-flex align-items-center justify-content-center auth-page">
     <div class="card shadow-lg border-0 p-4 auth-card">
       <div class="card-body">
-        <!-- Logo / Naslov -->
+        
+        <!-- Logo i Naslov iz priloga -->
         <div class="text-center mb-4">
-          <div class="brand-icon-wrapper mb-2 mx-auto">
-            <svg viewBox="0 0 24 24" class="brand-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          <div class="logo-wrapper mb-3 mx-auto">
+            <!-- Učitavanje logotipa iz assets mape -->
+            <img src="@/assets/logo.png" alt="School Guard Pro Logo" class="img-fluid project-logo" />
           </div>
-          <h3 class="fw-bold text-dark mb-1">School Guard</h3>
-          <p class="text-muted small">Prijavite se u sustav</p>
+          <h2 class="fw-bold project-title mb-1">School Guard Pro</h2>
+          <p class="text-muted small">Sustav kontrole i sigurnosti</p>
         </div>
 
-        <!-- Forma -->
+        <!-- Unosna forma -->
         <form @submit.prevent="handleLogin">
           <div class="form-floating mb-3">
             <input 
               type="email" 
-              class="form-control" 
+              class="form-control customs-input" 
               id="floatingEmail" 
               placeholder="name@example.com"
               v-model="email"
@@ -25,10 +27,10 @@
             <label for="floatingEmail">Email adresa</label>
           </div>
 
-          <div class="form-floating mb-3">
+          <div class="form-floating mb-4">
             <input 
               type="password" 
-              class="form-control" 
+              class="form-control customs-input" 
               id="floatingPassword" 
               placeholder="Lozinka"
               v-model="password"
@@ -37,28 +39,27 @@
             <label for="floatingPassword">Lozinka</label>
           </div>
 
-          <!-- Prikaz greške -->
-          <div v-if="errorMessage" class="alert alert-danger py-2 small" role="alert">
+          <div v-if="errorMessage" class="alert alert-danger py-2 small mb-3" role="alert">
             {{ errorMessage }}
           </div>
 
-          <!-- Gumb za prijavu -->
+          <!-- Gumb u točnoj boji sustava -->
           <button 
             type="submit" 
-            class="btn btn-primary w-100 py-2 fw-bold text-white shadow-sm mb-3"
+            class="btn btn-custom-green w-100 py-2.5 fw-bold text-white shadow-sm mb-3"
             :disabled="loading"
           >
-            {{ loading ? 'Prijava u tijeku...' : 'Prijavi se' }}
+            {{ loading ? 'Prijava...' : 'Login' }}
           </button>
         </form>
 
-        <!-- Navigacijski linkovi -->
-        <div class="text-center pt-2 border-top">
-          <router-link to="/signup" class="d-block small text-decoration-none mb-1 text-primary fw-semibold">
-            Nemate račun? Registrirajte se
+        <!-- Donji linkovi za Signup i Forgot Password -->
+        <div class="text-center pt-3 border-top">
+          <router-link to="/signup" class="d-block small text-decoration-none mb-2 link-green fw-semibold">
+            Create an Account / Registracija
           </router-link>
           <router-link to="/forgotpassword" class="d-block small text-decoration-none text-muted">
-            Zaboravili ste lozinku?
+            Forgot Password?
           </router-link>
         </div>
       </div>
@@ -98,11 +99,55 @@ export default {
 </script>
 
 <style scoped>
-.auth-page { min-height: calc(100vh - 65px); padding: 20px; }
-.auth-card { width: 100%; max-width: 400px; border-radius: 16px !important; background-color: #ffffff; }
-.brand-icon-wrapper { width: 55px; height: 55px; background-color: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.brand-icon { width: 28px; height: 28px; fill: #42b983; }
-.btn-primary { background-color: #42b983 !important; border-color: #42b983 !important; }
-.btn-primary:hover { background-color: #3aa876 !important; }
-.text-primary { color: #42b983 !important; }
+/* Strukturiranje razmjera ekrana */
+.auth-page {
+  min-height: calc(100vh - 65px);
+  padding: 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px !important;
+  background-color: #ffffff;
+}
+
+/* Stilovi logotipa */
+.logo-wrapper {
+  max-width: 120px;
+}
+.project-logo {
+  max-height: 140px;
+  object-fit: contain;
+}
+.project-title {
+  color: #111111;
+  font-size: 1.6rem;
+}
+
+/* Prilagodba unosa */
+.customs-input:focus {
+  border-color: #3ca62d !important;
+  box-shadow: 0 0 0 0.25rem rgba(60, 166, 45, 0.25) !important;
+}
+
+/* Custom gumb s točnom zelenom bojom s vaše slike */
+.btn-custom-green {
+  background-color: #3ca62d !important;
+  border-color: #3ca62d !important;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+.btn-custom-green:hover {
+  background-color: #2d8021 !important;
+  border-color: #2d8021 !important;
+}
+
+.link-green {
+  color: #3ca62d !important;
+}
+.link-green:hover {
+  color: #2d8021 !important;
+  text-decoration: underline !important;
+}
 </style>
