@@ -1,16 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from '../views/Home'
-import Login from '../views/Login'
-import Signup from '../views/Signup'
-import ForgotPassword from '../views/ForgotPassword'
-import UvjetiKoristenja from '../views/UvjetiKoristenja'
-import PravilaPrivatnosti from '../views/PravilaPrivatnosti'
-import Dashboard from '../views/Dashboard'
-import UnosiView from '../views/UnosiView' 
+// EKSPLICITNO DODANE .VUE EKSTENZIJE ZA WEBPACK 4:
+import Home from '../views/Home.vue'
+import Login from '../views/Login.vue'
+import Signup from '../views/Signup.vue'
+import ForgotPassword from '../views/ForgotPassword.vue'
+import UvjetiKoristenja from '../views/UvjetiKoristenja.vue'
+import PravilaPrivatnosti from '../views/PravilaPrivatnosti.vue'
+import Dashboard from '../views/Dashboard.vue'
+import UnosiView from '../views/UnosiView.vue'
 
 Vue.use(VueRouter)
+
 const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/login', name: 'Login', component: Login },
@@ -18,12 +20,8 @@ const routes = [
   { path: '/forgotpassword', name: 'ForgotPassword', component: ForgotPassword },
   { path: '/uvjetikoristenja', name: 'UvjetiKoristenja', component: UvjetiKoristenja },
   { path: '/pravilaprivatnosti', name: 'PravilaPrivatnosti', component: PravilaPrivatnosti },
-
-   {
-    path: '/unosi',
-    name: 'UnosiView',
-    component: UnosiView
-  }
+  { path: '/dashboard', name: 'Dashboard', component: Dashboard },
+  { path: '/unosi', name: 'UnosiView', component: UnosiView }
 ]
 
 const router = new VueRouter({

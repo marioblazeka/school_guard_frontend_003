@@ -5,7 +5,7 @@
       
       <!-- Gumb za povratak (Strelica) -->
       <button @click="$router.push('/')" class="btn-back shadow-sm" title="Povratak">
-        <svg viewBox="0 0 24 24" class="arrow-icon"><path d="M15.41 7.41L14 6l-6 6 6 6 14-1.41L15.41 7.41z"/></svg>
+        <svg viewBox="0 0 24 24" class="arrow-icon"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L15.41 7.41z"/></svg>
       </button>
 
       <!-- Gornji dio: Veliki logotip i naziv brenda iz Figme -->
@@ -76,7 +76,6 @@ export default {
   name: 'DashboardView',
   data() {
     return {
-      // Pravilo struke: Provjera uloge korisnika
       isAdmin: false 
     };
   },
@@ -84,24 +83,16 @@ export default {
     this.checkUserRole();
   },
   methods: {
-  checkUserRole() {
-    const user = auth.currentUser;
-    if (user) {
-      // Sustav će sada prepoznati vaš studentski email kao Admin pristup
-      if (
-        user.email === 'mblazeka@student.unipu.hr' || 
-        user.email.endsWith('@admin.com')
-      ) {
-        this.isAdmin = true;
-      }
-    }
-  },
+    checkUserRole() {
+      const user = auth.currentUser;
+      if (user) {
+        if (user.email === 'mblazeka@student.unipu.hr' || user.email.endsWith('@admin.com')) {
+          this.isAdmin = true;
+        }
       }
     },
     navigateTo(section) {
-      // Slanje parametra opsega pristupa (tekući dan ili sve) na sljedeću stranicu
       const scope = this.isAdmin ? 'all' : 'today';
-      
       this.$router.push({ 
         name: 'UnosiView', 
         query: { modul: section, pristup: scope } 
@@ -117,8 +108,6 @@ export default {
   width: 100%;
   padding: 20px;
 }
-
-/* Kućište mobilnog ekrana prema Figmi (#3ca62d) */
 .mobile-screen {
   width: 100%;
   max-width: 380px;
@@ -129,11 +118,9 @@ export default {
   color: #111111;
   overflow: hidden;
 }
-
-/* Mala crna okrugla strelica za povratak s vaše slike */
 .btn-back {
   position: absolute;
-  top: 260px; /* Točno poravnato sa slikom */
+  top: 25px;
   left: 20px;
   width: 32px;
   height: 32px;
@@ -148,13 +135,9 @@ export default {
 }
 .btn-back:hover { transform: scale(1.1); }
 .arrow-icon { width: 18px; height: 18px; fill: #ffffff; }
-
-/* Logotip i naslov */
 .logo-container { max-width: 110px; }
 .dashboard-logo { max-height: 120px; object-fit: contain; mix-blend-mode: multiply; }
 .brand-name { font-size: 1.45rem; color: #111111; }
-
-/* Velike bijele kartice s vaše slike */
 .menu-card {
   background-color: #ffffff;
   border-radius: 12px;
@@ -166,7 +149,6 @@ export default {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15) !important;
 }
-
 .icon-box {
   width: 45px;
   height: 45px;
@@ -177,15 +159,12 @@ export default {
 .card-icon {
   width: 34px;
   height: 34px;
-  fill: #111111; /* Crne ikone iz dizajna */
+  fill: #111111;
 }
-
 .menu-card h5 {
   font-size: 1.05rem;
   letter-spacing: 0.5px;
   color: #333333;
 }
-
-/* Sakrivanje klizača za čišći izgled */
 .menu-section::-webkit-scrollbar { width: 0px; }
 </style>
