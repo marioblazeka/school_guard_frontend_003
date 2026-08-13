@@ -22,7 +22,9 @@ ona je odgovor na izazov vremena u kojem sigurnost više ne smije biti naknadna 
 
 ## <[link na YouTube](https://)>FIPU - SchoolGuardianPro</a>
 
-[Screenshot Figma design](https://drive.google.com/file/d/1Nmz_HCfJNoHbgNJdUZx-OXe0mk-o-AtA/view?usp=drive_link)
+[Figma proto](https://www.figma.com/proto/MzqlwTLoPggT36GC2wzlyk/SchoolGuardianPro002?node-id=1-192&p=f&t=9LLcmolck0SsHZ60-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A112&show-proto-sidebar=1)
+
+[Figma design](https://www.figma.com/design/MzqlwTLoPggT36GC2wzlyk/SchoolGuardianPro002?node-id=0-1&p=f&t=9LLcmolck0SsHZ60-0)
 
 [Projektna dokumentacija School Guardian Pro](https://docs.google.com/document/d/12Es3RdIFKWP3sBHOhXs2iFaIhqs6uD3pxfHWD6VZlu4/edit?usp=drive_link)
 
@@ -36,7 +38,8 @@ ona je odgovor na izazov vremena u kojem sigurnost više ne smije biti naknadna 
 
 <details>
 <summary>▶ Klikni ovdje za prikaz skrivenog teksta</summary>
-Branch Master se osvježava s lokalnog diska na mom laptopu
+
+Branch main se osvježava s lokalnog diska na mom laptopu
 
 
 # school_guard_frontend_003
