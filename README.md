@@ -20,7 +20,7 @@ ona je odgovor na izazov vremena u kojem sigurnost više ne smije biti naknadna 
 
 ## <[link na gitHub](https://github.com/marioblazeka/school_guard_frontend_003)> SchoolGuardianPro- Frontend</a>
 
-## <[link na YouTube](https://https://www.youtube.com/watch?v=A1CtRN58Srs)>FIPU - SchoolGuardianPro</a>
+## <[link na YouTube](https://youtu.be/A1CtRN58Srs?si=4LmN-_jix1sF6NTH)>FIPU - SchoolGuardianPro</a>
 
 [Figma proto](https://www.figma.com/proto/MzqlwTLoPggT36GC2wzlyk/SchoolGuardianPro002?node-id=1-192&p=f&t=9LLcmolck0SsHZ60-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A112&show-proto-sidebar=1)
 
