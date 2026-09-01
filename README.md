@@ -10,7 +10,7 @@
 ### Fakultet informatike Programsko inženjerstvo (199741) (PIFIPU)
 
 
-## <[link na javni URL aplikacije](https://majestic-naiad-3f46c6.netlify.app/)> SchoolGuardianPro</a>
+## <[link na javni URL aplikacije](https://schoolguardpro.netlify.app/)> SchoolGuardianPro</a>
 ### Kratki opis funkcionalnosti:
 Uvođenjem SchoolGuardianPro ostvaruju se ključne koristi: povećava se odgovornost jer svaki unos nosi digitalni trag, 
 smanjuje se ljudska pogreška zahvaljujući standardiziranim obrascima, te se znatno ubrzava vrijeme reakcije na prijave kvarova ili sumnjivih pojava.
@@ -20,7 +20,7 @@ ona je odgovor na izazov vremena u kojem sigurnost više ne smije biti naknadna 
 
 ## <[link na gitHub](https://github.com/marioblazeka/school_guard_frontend_003)> SchoolGuardianPro- Frontend</a>
 
-## <[link na YouTube](https://)>FIPU - SchoolGuardianPro</a>
+## <[link na YouTube](https://https://www.youtube.com/watch?v=A1CtRN58Srs)>FIPU - SchoolGuardianPro</a>
 
 [Figma proto](https://www.figma.com/proto/MzqlwTLoPggT36GC2wzlyk/SchoolGuardianPro002?node-id=1-192&p=f&t=9LLcmolck0SsHZ60-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A112&show-proto-sidebar=1)
 
